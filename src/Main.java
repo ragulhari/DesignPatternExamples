@@ -7,13 +7,13 @@ import com.examples.observer.SistemaAlarme;
 import com.examples.observer.Vigilancia;
 import com.examples.singleton.*;
 import com.examples.strategy.*;
-import javafx.scene.effect.Lighting;
+import com.examples.factoryMethod.*;
 
 public class Main {
 
     public static void main(String[] args){
 
-        String pattern = "observer";
+        String pattern = "factorymethod";
 
         switch (pattern){
             case "facade":
@@ -57,6 +57,16 @@ public class Main {
                 System.out.println("Alarme disparado!!!");
                 ss.dispararAlarme();
                 break;
+            case "factorymethod":
+                Cozinheiro c = new Cozinheiro();
+                Prato f1 = c.pedePrato("BIFE");
+                f1.cozinhar();
+                Prato f2 = c.pedePrato("FRANGO");
+                f2.cozinhar();
+                Prato f3 = c.pedePrato("PEIXE");
+                f3.cozinhar();
+                break;
+
         }
 
     }

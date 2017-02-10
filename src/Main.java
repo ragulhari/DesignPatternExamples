@@ -1,19 +1,19 @@
+import com.examples.command.*;
 import com.examples.decorator.*;
 import com.examples.composite.*;
 import com.examples.adapter.*;
-import com.examples.observer.SensorLuzes;
-import com.examples.observer.SensorPortao;
-import com.examples.observer.SistemaAlarme;
-import com.examples.observer.Vigilancia;
+import com.examples.memento.ExecutarMemento;
+import com.examples.observer.*;
 import com.examples.singleton.*;
 import com.examples.strategy.*;
 import com.examples.factoryMethod.*;
+import com.examples.templateMethod.*;
 
 public class Main {
 
     public static void main(String[] args){
 
-        String pattern = "factorymethod";
+        String pattern = "memento";
 
         switch (pattern){
             case "facade":
@@ -38,8 +38,13 @@ public class Main {
                 TestarCompositePattern testeComposite = new TestarCompositePattern();
                 testeComposite.executarTestes();
             case "adapter":
-                TestarAdapterPattern testeAdapter = new TestarAdapterPattern();
-                testeAdapter.iniciar();
+                TesteAdapter testeAdapter = new TesteAdapter();
+                System.out.println("--------Iniciando teste com adapter do tipo classe-------");
+                testeAdapter.iniciarClassTypeTest();
+                System.out.println("---------------------------------------------------------");
+                System.out.println("--------Iniciando teste com adapter do tipo objeto-------");
+                testeAdapter.iniciarObjectTypeTest();
+                System.out.println("---------------------------------------------------------");
                 break;
             case "singleton":
                 Comunicador obj = new Comunicador();
@@ -66,6 +71,18 @@ public class Main {
                 Prato f3 = c.pedePrato("PEIXE");
                 f3.cozinhar();
                 break;
+            case "templateMethod":
+                Partida p = new Basquetebol();
+                p.jogo();
+                p = new Futebol();
+                p.jogo();
+                break;
+            case "command":
+                ExecutarCommand ex = new ExecutarCommand();
+                ex.iniciar();
+                break;
+            case "memento":
+                ExecutarMemento.go();
 
         }
 

@@ -1,9 +1,9 @@
 package com.examples.adapter;
 
 
-public class TestarAdapterPattern {
+public class TesteAdapter {
 
-    public TestarAdapterPattern() {}
+    public TesteAdapter() {}
 
     public void iniciarClassTypeTest() {
         AdapterClassType cc1 = new AdapterClassType("João Carlos");

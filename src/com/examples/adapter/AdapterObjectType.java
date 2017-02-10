@@ -3,11 +3,7 @@ package com.examples.adapter;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author ricardo
- */
-public class AdapterUsandoCC implements INovaContaCorrente{
+public class AdapterObjectType implements INovaContaCorrente{
  
     public ContaCorrente objContaCorrente;
     

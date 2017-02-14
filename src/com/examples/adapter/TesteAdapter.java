@@ -1,12 +1,24 @@
 package com.examples.adapter;
 
+/**
+ * Classe construída para simular a execução dos dois exemplos, o "Class Type" e o "Object Type".
+ * Essa classe contem dois métodos, um para cada exemplo.
+ * Cada exemplo consiste na inclusão de uma série de lançamentos e a execução das duas operações
+ * implementadas no adapter: extrato dos últimos 12 lançamentos e o hsitórico de saldos.
+ */
 
 public class TesteAdapter {
 
-    public TesteAdapter() {}
-
+    //Realiza a execução do teste de adapter do tipo "Class Type"
     public void iniciarClassTypeTest() {
+
+        /*A classe AdapterClassType recebe no construtor o nome do correntista. A classe ObjectTypeAdapter
+        recebe o nome como um parâmetro. Isso porque cada uma das abordagens tem formas diferentes de instanciação.
+        (verifique a implementação das classes)
+         */
         AdapterClassType cc1 = new AdapterClassType("João Carlos");
+
+        //Lista de lançamentos usados no teste
         cc1.insereLancamento("Depósito", 2000.0f);
         cc1.insereLancamento("Saque", -110.0f);
         cc1.insereLancamento("Conta de luz", -36.43f);
@@ -23,8 +35,10 @@ public class TesteAdapter {
         cc1.insereLancamento("Pagamento cartão débito - mensalidade", -250.10f);
         cc1.insereLancamento("Depósito", 800.00f);
 
-
+        //Execução do teste de impressão do extrato com últimos 12 lançamentos
         System.out.println(cc1.ultimos12Lancamentos());
+
+        //Execução do teste de histórico de saldos
         float[] fHistoricoSaldo = cc1.historicoSaldo();
         for (int i = 0; i < fHistoricoSaldo.length; i++) {
             System.out.println("Saldo: " + Float.toString(fHistoricoSaldo[i]));
@@ -33,9 +47,17 @@ public class TesteAdapter {
         System.out.println("Saldo atual: " + cc1.getSaldo());
     }
 
+    //Realiza a execução do teste de adapter do tipo "Object Type"
     public void iniciarObjectTypeTest()
     {
+        /*A classe ObjectTypeAdapter recebe o nome como um parâmetro.
+        A classe AdapterClassType recebe no construtor o nome do correntista.
+        Isso porque cada uma das abordagens tem formas diferentes de instanciação.
+        (verifique a implementação das classes)
+         */
         AdapterObjectType cc1 = new AdapterObjectType();
+
+        //Lista de lançamentos usados no teste
         cc1.criarContaCorrente("João Carlos");
         cc1.objContaCorrente.insereLancamento("Depósito", 2000.0f);
         cc1.objContaCorrente.insereLancamento("Saque", -110.0f);
@@ -53,8 +75,10 @@ public class TesteAdapter {
         cc1.objContaCorrente.insereLancamento("Pagamento cartão débito - mensalidade", -250.10f);
         cc1.objContaCorrente.insereLancamento("Depósito", 800.00f);
 
-
+        //Execução do teste de impressão do extrato com últimos 12 lançamentos
         System.out.println(cc1.ultimos12Lancamentos());
+
+        //Execução do teste de histórico de saldos
         float[] fHistoricoSaldo = cc1.historicoSaldo();
         for (int i = 0; i < fHistoricoSaldo.length; i++){
             System.out.println("Saldo: " + Float.toString(fHistoricoSaldo[i]));

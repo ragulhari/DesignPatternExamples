@@ -1,9 +1,11 @@
 package com.examples.adapter;
 
+import com.examples.adapter.interfaces.INovaContaCorrente;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdapterObjectType implements INovaContaCorrente{
+public class AdapterObjectType implements INovaContaCorrente {
  
     public ContaCorrente objContaCorrente;
     

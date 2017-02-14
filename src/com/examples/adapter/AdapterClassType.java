@@ -1,5 +1,7 @@
 package com.examples.adapter;
 
+import com.examples.adapter.interfaces.INovaContaCorrente;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -9,6 +9,7 @@ import com.examples.mediator.ExecutaMediator;
 import com.examples.memento.ExecutarMemento;
 import com.examples.observer.ExecutaObserver;
 import com.examples.singleton.ExecutaSingleton;
+import com.examples.state.ExecutaState;
 import com.examples.strategy.ExecutaStrategy;
 import com.examples.factoryMethod.ExecutaFactoryMethod;
 import com.examples.templateMethod.ExecutaTemplateMethod;
@@ -29,7 +30,7 @@ public class Main {
         /*Variável usada para definição do pattern de execução. Contém um valor padrão que
         pode ser modificada para um dos patterns listados no Switch abaixo.
          */
-        String pattern = "flyweight";
+        String pattern = "command";
 
         //Tratamento dos parâmetros usados na execução. Só será considerado o primeiro parâmetro.
         try {
@@ -88,6 +89,9 @@ public class Main {
                 break;
             case "flyweight":
                 ExecutaFlyweight.go(10000);
+                break;
+            case "state":
+                ExecutaState.go();
                 break;
             default:
                 //Tratamento caso o pattern não seja achado.

@@ -1,7 +1,14 @@
 package com.examples.templateMethod;
 
-/**
- * Created by ricardo on 2/8/17.
- */
-public interface Partida {
+public abstract class Partida {
+    abstract void prepararJogo();
+    abstract void iniciarPartida();
+    abstract void terminarPartida();
+
+    public final void jogo()
+    {
+        prepararJogo();
+        iniciarPartida();
+        terminarPartida();
+    }
 }

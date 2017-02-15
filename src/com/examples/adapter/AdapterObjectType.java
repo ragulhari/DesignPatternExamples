@@ -1,21 +1,30 @@
 package com.examples.adapter;
 
+import com.examples.adapter.interfaces.INovaContaCorrente;
+
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
- *
- * @author ricardo
+ * Essa classe implementa a adaptação por objetos do exemplo. A adaptação por objeto consiste
+ * na instanciação de um objeto da classe adaptada e o uso dela para criar as informaçẽos que
+ * resultarão na saída adaptada. Os métodos que serão adaptados estão definidos em INovaContaCorrente
  */
-public class AdapterUsandoCC implements INovaContaCorrente{
- 
+public class AdapterObjectType implements INovaContaCorrente {
+
+    //Instanciação da classe adaptada para ser usada na adaptação
     public ContaCorrente objContaCorrente;
     
     public void criarContaCorrente(String nomeCorrentista)
     {
         objContaCorrente = new ContaCorrente(nomeCorrentista);
     }
-    
+
+
+    /*Implementação do método de extrato dos últimos 12 lançamentos. Verifique como o objeto
+    * objContaCorrente é utilizado e as operações que são utilizadas para adaptar a saída para
+    * o desejado.*/
     @Override
     public String ultimos12Lancamentos() {
         String retorno = "";
@@ -33,6 +42,9 @@ public class AdapterUsandoCC implements INovaContaCorrente{
         
     }
 
+    /*Implementação do método de histórico de saldo. Verifique como o objeto
+    * objContaCorrente é utilizado e as operações que são utilizadas para adaptar a saída para
+    * o desejado.*/
     @Override
     public float[] historicoSaldo() {
         List<Float> list = new ArrayList<>();

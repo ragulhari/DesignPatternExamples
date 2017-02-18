@@ -5,4 +5,5 @@ package com.examples.proxy.interfaces;
  */
 public interface IImagem {
     void display();
+    String getResolution();
 }

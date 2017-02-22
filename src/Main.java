@@ -1,4 +1,5 @@
 import com.examples.abstractFactory.ExecutaAbstractFactory;
+import com.examples.chainOfResponsibility.ExecutaChainOfResponsibility;
 import com.examples.command.ExecutaCommand;
 import com.examples.decorator.ExecutaDecorator;
 import com.examples.composite.ExecutaComposite;
@@ -6,6 +7,7 @@ import com.examples.adapter.ExecutaAdapter;
 import com.examples.dependencyInjection.ExecutaDI;
 import com.examples.facade.ExecutaFacade;
 import com.examples.flyweight.ExecutaFlyweight;
+import com.examples.iterator.ExecutaIterator;
 import com.examples.mediator.ExecutaMediator;
 import com.examples.memento.ExecutarMemento;
 import com.examples.observer.ExecutaObserver;
@@ -33,7 +35,7 @@ public class Main {
         /*Variável usada para definição do pattern de execução. Contém um valor padrão que
         pode ser modificada para um dos patterns listados no Switch abaixo.
          */
-        String pattern = "prototype";
+        String pattern = "chainOfResponsibility";
 
         //Tratamento dos parâmetros usados na execução. Só será considerado o primeiro parâmetro.
         try {
@@ -104,6 +106,12 @@ public class Main {
                 break;
             case "prototype":
                 ExecutaPrototype.go();
+                break;
+            case "iterator":
+                ExecutaIterator.go();
+                break;
+            case "chainOfResponsibility":
+                ExecutaChainOfResponsibility.go(330);
                 break;
             default:
                 //Tratamento caso o pattern não seja achado.

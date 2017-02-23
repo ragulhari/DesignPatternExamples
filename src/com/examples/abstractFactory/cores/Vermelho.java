@@ -3,7 +3,7 @@ package com.examples.abstractFactory.cores;
 import com.examples.abstractFactory.cores.interfaces.ICor;
 
 /**
- * Created by ricardo on 2/17/17.
+ * Classe "vermelho", implementando a interface ICor
  */
 public class Vermelho implements ICor {
 

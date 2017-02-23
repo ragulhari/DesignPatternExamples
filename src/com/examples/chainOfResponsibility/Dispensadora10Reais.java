@@ -3,7 +3,7 @@ package com.examples.chainOfResponsibility;
 import com.examples.chainOfResponsibility.interfaces.Dispensadora;
 
 /**
- * Created by ricardo on 2/21/17.
+ * Implementação da dispensadora de R$ 10,00
  */
 public class Dispensadora10Reais implements Dispensadora {
 
@@ -16,6 +16,15 @@ public class Dispensadora10Reais implements Dispensadora {
 
     @Override
     public void sacarDinheiro(int quantidade) {
+
+        /*
+        * O método sacarDinheiro basicamente verifica se a quantidade faltante para o saque é maior ou igual ao
+        * valor contido na dispensadora. Caso negativo, passa a responsabilidade para o próximo da cadeia.
+        * Caso seja maior, verifica se há possibilidade de dispensar notas, vendo a quantidade de notas que pode
+        * ser oferecido e o valor restante após a liberação das notas dessa dispensadora. Por fim, transfere
+        * a responsabilidade para a próxima dispensadora da cadeia.
+        * */
+
         if (quantidade >= 10) {
             int num = quantidade / 10;
             int faltante = quantidade % 10;

@@ -3,7 +3,9 @@ package com.examples.abstractFactory;
 import com.examples.abstractFactory.interfaces.IAbstractFactory;
 
 /**
- * Created by ricardo on 2/17/17.
+ * Classe que funciona como um "Factory de factories". Basicamente possui um método
+ * "getFactory" que recebe como parâmetro o tipo de factory necessário e retona um objeto
+ * do tipo IAbstractFactory
  */
 public class ClassesFactory {
     public static IAbstractFactory getFactory(String escolha) {

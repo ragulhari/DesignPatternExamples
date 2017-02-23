@@ -8,7 +8,10 @@ import com.examples.abstractFactory.formas.interfaces.IForma;
 import com.examples.abstractFactory.interfaces.IAbstractFactory;
 
 /**
- * Created by ricardo on 2/17/17.
+ * Classe que implementa a factory de "Cor" Por implementar "IAbstractFactory", é necessário declarar
+ * os métodos de factory de cor e forma, porém o factory de "Forma" retorna nulo.
+ * A factory "Cor" retorna um objeto do tipo "ICor" e a definição de qual objeto retornar é
+ * feita com base no valor do parâmetro passado para "getCor"
  */
 public class CorFactory implements IAbstractFactory {
     @Override

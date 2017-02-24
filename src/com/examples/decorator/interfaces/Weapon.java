@@ -1,4 +1,4 @@
-package com.examples.decorator;
+package com.examples.decorator.interfaces;
 
 
 public interface Weapon {

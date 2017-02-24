@@ -1,5 +1,7 @@
 package com.examples.decorator;
 
+import com.examples.decorator.interfaces.Weapon;
+
 public class ZoomScopeWeapon extends WeaponAccessory {
 
     public ZoomScopeWeapon(Weapon decoratedWeapon) {

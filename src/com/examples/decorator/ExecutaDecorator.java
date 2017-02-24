@@ -1,5 +1,7 @@
 package com.examples.decorator;
 
+import com.examples.decorator.interfaces.Weapon;
+
 /**
  * Created by ricardo on 2/14/17.
  */

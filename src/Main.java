@@ -35,7 +35,7 @@ public class Main {
         /*Variável usada para definição do pattern de execução. Contém um valor padrão que
         pode ser modificada para um dos patterns listados no Switch abaixo.
          */
-        String pattern = "chainOfResponsibility";
+        String pattern = "decorator";
 
         //Tratamento dos parâmetros usados na execução. Só será considerado o primeiro parâmetro.
         try {

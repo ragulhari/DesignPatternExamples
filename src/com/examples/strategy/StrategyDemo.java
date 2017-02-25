@@ -1,6 +1,6 @@
 package com.examples.strategy;
 
-import com.examples.composite.Inimigo;
+import com.examples.composite.IInimigo;
 
 /**
  * Created by ricardo on 2/4/17.
@@ -13,10 +13,10 @@ public class StrategyDemo {
 
     public void executarDemo()
     {
-        Inimigo tartaruga1 = new Inimigo("Tartaruga básica 1", 2, 1);
-        Inimigo tartaruga2 = new Inimigo("Tartaruga básica 2", 2, 1);
-        Inimigo tartaruga3 = new Inimigo("Tartaruga básica 3", 2, 1);
-        Inimigo flor1 = new Inimigo("Flor de fogo", 4, 2);
+        IInimigo tartaruga1 = new IInimigo("Tartaruga básica 1", 2, 1);
+        IInimigo tartaruga2 = new IInimigo("Tartaruga básica 2", 2, 1);
+        IInimigo tartaruga3 = new IInimigo("Tartaruga básica 3", 2, 1);
+        IInimigo flor1 = new IInimigo("Flor de fogo", 4, 2);
 
         AtaqueVoador atkVoador = new AtaqueVoador();
         FlorAtaque atkFlor = new FlorAtaque();

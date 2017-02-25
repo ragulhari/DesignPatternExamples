@@ -23,7 +23,7 @@ public class AtaqueVoador implements IAtaque {
         altura = Math.abs((rnd.nextInt() % 4)) + 1; //O método abs retorna o número absoluto, sem sinal
         alcanceAtaque = Math.abs((rnd.nextInt() % 4)) + 1; //O método abs retorna o número absoluto, sem sinal
 
-        return "Inimigo  " + tituloInimigo +
+        return "IInimigo  " + tituloInimigo +
                 " ganhou asas e agora pula com altura " + altura +
                 " e alcance do ataque " + alcanceAtaque;
     }

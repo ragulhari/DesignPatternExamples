@@ -15,7 +15,7 @@ package com.examples.composite;
  * em aula). Este exemplo tem continuidade no pattern Strategy. Neste caso o exemplo consiste
  * na instanciação e definição dos inimigos, criando uma hierarquia com base na especialização dos inimigos
  * (por exemplo, no primeiro nível uma tartaruga, o segundo uma tartaruga com asas, etc.).
- * Todos os objetos "Inimigo" possui um método render(), que seria responsável pela renderização do objeto
+ * Todos os objetos "IInimigo" possui um método render(), que seria responsável pela renderização do objeto
  * no jogo.
  *
  * @author Ricardo D. Agulhari
@@ -87,12 +87,12 @@ public class ExecutaComposite {
         * dos objetos do tipo inimigo e a montagem da hierarquia dos objetos.
         * */
 
-        Inimigo inimigoBase = new Inimigo("Inimigo Base", 0, 0);
-        Inimigo tartaruga = new Inimigo("Tartaruga básica", 2, 1);
-        Inimigo tartarugaFogo = new Inimigo("Tartaruga de fogo", 2, 6);
-        Inimigo tartarugaVoador = new Inimigo("Tartaruga Voadora", 2, 4);
-        Inimigo goomba = new Inimigo("Goomba", 1, 1);
-        Inimigo goombaVoador = new Inimigo("Goomba Voador", 1, 3);
+        IInimigo inimigoBase = new IInimigo("IInimigo Base", 0, 0);
+        IInimigo tartaruga = new IInimigo("Tartaruga básica", 2, 1);
+        IInimigo tartarugaFogo = new IInimigo("Tartaruga de fogo", 2, 6);
+        IInimigo tartarugaVoador = new IInimigo("Tartaruga Voadora", 2, 4);
+        IInimigo goomba = new IInimigo("Goomba", 1, 1);
+        IInimigo goombaVoador = new IInimigo("Goomba Voador", 1, 3);
 
         tartaruga.add(tartarugaFogo);
         tartaruga.add(tartarugaVoador);
@@ -107,11 +107,11 @@ public class ExecutaComposite {
         * */
 
         System.out.println("Hierarquia de inimigos");
-        for (Inimigo i : inimigoBase.especializacoes) {
+        for (IInimigo i : inimigoBase.especializacoes) {
 
             System.out.println("\t" + i.render());
 
-            for (Inimigo in : i.especializacoes)
+            for (IInimigo in : i.especializacoes)
                 System.out.println("\t\t" + in.render());
 
         }

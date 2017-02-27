@@ -1,4 +1,6 @@
 import com.examples.abstractFactory.ExecutaAbstractFactory;
+import com.examples.bridge.ExecutaBridge;
+import com.examples.builder.ExecutaBuilder;
 import com.examples.chainOfResponsibility.ExecutaChainOfResponsibility;
 import com.examples.command.ExecutaCommand;
 import com.examples.decorator.ExecutaDecorator;
@@ -35,7 +37,7 @@ public class Main {
         /*Variável usada para definição do pattern de execução. Contém um valor padrão que
         pode ser modificada para um dos patterns listados no Switch abaixo.
          */
-        String pattern = "decorator";
+        String pattern = "builder";
 
         //Tratamento dos parâmetros usados na execução. Só será considerado o primeiro parâmetro.
         try {
@@ -112,6 +114,12 @@ public class Main {
                 break;
             case "chainOfResponsibility":
                 ExecutaChainOfResponsibility.go(330);
+                break;
+            case "bridge":
+                ExecutaBridge.go();
+                break;
+            case "builder":
+                ExecutaBuilder.go();
                 break;
             default:
                 //Tratamento caso o pattern não seja achado.

@@ -9,6 +9,7 @@ import com.examples.adapter.ExecutaAdapter;
 import com.examples.dependencyInjection.ExecutaDI;
 import com.examples.facade.ExecutaFacade;
 import com.examples.flyweight.ExecutaFlyweight;
+import com.examples.interpreter.ExecutaInterpreter;
 import com.examples.iterator.ExecutaIterator;
 import com.examples.mediator.ExecutaMediator;
 import com.examples.memento.ExecutarMemento;
@@ -20,6 +21,7 @@ import com.examples.state.ExecutaState;
 import com.examples.strategy.ExecutaStrategy;
 import com.examples.factoryMethod.ExecutaFactoryMethod;
 import com.examples.templateMethod.ExecutaTemplateMethod;
+import com.examples.visitor.ExecutaVisitor;
 
 /**
  * Classe criada para centralizar todos as execuções de Patterns contidos na solution.
@@ -37,7 +39,7 @@ public class Main {
         /*Variável usada para definição do pattern de execução. Contém um valor padrão que
         pode ser modificada para um dos patterns listados no Switch abaixo.
          */
-        String pattern = "builder";
+        String pattern = "interpreter";
 
         //Tratamento dos parâmetros usados na execução. Só será considerado o primeiro parâmetro.
         try {
@@ -120,6 +122,12 @@ public class Main {
                 break;
             case "builder":
                 ExecutaBuilder.go();
+                break;
+            case "visitor":
+                ExecutaVisitor.go();
+                break;
+            case "interpreter":
+                ExecutaInterpreter.go();
                 break;
             default:
                 //Tratamento caso o pattern não seja achado.

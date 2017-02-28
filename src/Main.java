@@ -57,65 +57,11 @@ public class Main {
         * */
 
         switch (pattern){
-            case "facade":
-                ExecutaFacade.go();
-                break;
-            case "mediator":
-                ExecutaMediator.go();
-                break;
-            case "decorator":
-                ExecutaDecorator.go();
-                break;
-            case "composite":
-                ExecutaComposite.go();
-                break;
-            case "adapter":
-                ExecutaAdapter.go();
-                break;
-            case "singleton":
-                ExecutaSingleton.go();
-                break;
-            case "strategy":
-                ExecutaStrategy.go();
-                break;
-            case "observer":
-                ExecutaObserver.go();
-                break;
-            case "factorymethod":
-                ExecutaFactoryMethod.go();
-                break;
-            case "dependencyInjection":
-                ExecutaDI.go();
-                break;
-            case "templateMethod":
-                ExecutaTemplateMethod.go();
-                break;
-            case "command":
-                ExecutaCommand.go();
-                break;
-            case "memento":
-                ExecutarMemento.go();
-                break;
-            case "flyweight":
-                ExecutaFlyweight.go(10000);
-                break;
-            case "state":
-                ExecutaState.go();
-                break;
-            case "proxy":
-                ExecutaProxy.go();
-                break;
             case "abstractFactory":
                 ExecutaAbstractFactory.go();
                 break;
-            case "prototype":
-                ExecutaPrototype.go();
-                break;
-            case "iterator":
-                ExecutaIterator.go();
-                break;
-            case "chainOfResponsibility":
-                ExecutaChainOfResponsibility.go(330);
+            case "adapter":
+                ExecutaAdapter.go();
                 break;
             case "bridge":
                 ExecutaBridge.go();
@@ -123,11 +69,65 @@ public class Main {
             case "builder":
                 ExecutaBuilder.go();
                 break;
-            case "visitor":
-                ExecutaVisitor.go();
+            case "chainOfResponsibility":
+                ExecutaChainOfResponsibility.go(330);
+                break;
+            case "command":
+                ExecutaCommand.go();
+                break;
+            case "composite":
+                ExecutaComposite.go();
+                break;
+            case "decorator":
+                ExecutaDecorator.go();
+                break;
+            case "dependencyInjection":
+                ExecutaDI.go();
+                break;
+            case "facade":
+                ExecutaFacade.go();
+                break;
+            case "factorymethod":
+                ExecutaFactoryMethod.go();
+                break;
+            case "flyweight":
+                ExecutaFlyweight.go(10000);
                 break;
             case "interpreter":
                 ExecutaInterpreter.go();
+                break;
+            case "iterator":
+                ExecutaIterator.go();
+                break;
+            case "mediator":
+                ExecutaMediator.go();
+                break;
+            case "memento":
+                ExecutarMemento.go();
+                break;
+            case "observer":
+                ExecutaObserver.go();
+                break;
+            case "prototype":
+                ExecutaPrototype.go();
+                break;
+            case "proxy":
+                ExecutaProxy.go();
+                break;
+            case "singleton":
+                ExecutaSingleton.go();
+                break;
+            case "state":
+                ExecutaState.go();
+                break;
+            case "strategy":
+                ExecutaStrategy.go();
+                break;
+            case "templateMethod":
+                ExecutaTemplateMethod.go();
+                break;
+            case "visitor":
+                ExecutaVisitor.go();
                 break;
             default:
                 //Tratamento caso o pattern não seja achado.

@@ -1,5 +1,11 @@
 package com.examples.facade;
 
+/**
+ * Classe que implementa o motor do carro, bem como as regras de negócio que envolvem ligar e desligar
+ * o motor. É a classe que mais tem dependências com outros componentes, como o tanque e a parte elétrica.
+ *
+ */
+
 public class Motor {
 
     private boolean motorLigado = false;
@@ -14,6 +20,11 @@ public class Motor {
 
     }
 
+    /*
+    * A operação Ligar possui algumas regras de negócio. Para que o motor seja ligado, a parte elétrica
+    * do carro deve estar habilitada (mais sobre issso na classe da parte elétrica)
+    * e o tanque de combustível não pode estar na reserva. Caso contrário o motor não será ligado.
+    * */
     public String ligar()
     {
         if (motorLigado)
@@ -31,6 +42,9 @@ public class Motor {
 
     }
 
+    /*
+    * Para desligar o carro, a única verificação é de que o motor está ligado.
+    * */
     public String desligar()
     {
         if (motorLigado == false)

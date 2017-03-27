@@ -132,7 +132,7 @@ public class Main {
             default:
                 //Tratamento caso o pattern não seja achado.
                 System.out.println("Não foi encontrado pattern com o nome " + pattern);
-                break;
+                 break;
         }
 
     }

@@ -1,14 +1,16 @@
 package com.examples.bridge;
 
-import com.examples.bridge.interfaces.Tv;
+import com.examples.bridge.interfaces.ITv;
 
 /**
- * Created by ricardo on 2/27/17.
+ * Classe que implementa algumas das operações comuns a todos os controles. A declaração da
+ * variável "televisao" caracteriza a bridge. Não importa a implementação de TV, todos os controles
+ * remotos que estenderem essa classe funcionarão. O contrário também é verdae.
  */
 public abstract class ControleRemoto {
-    protected Tv televisao;
+    protected ITv televisao;
 
-    public ControleRemoto(Tv televisao) {
+    public ControleRemoto(ITv televisao) {
         this.televisao = televisao;
     }
 
@@ -23,6 +25,7 @@ public abstract class ControleRemoto {
         televisao.mudarCanal(channel);
     }
 
+    //O método getCanalAtual tem o objetivo de apenas retornar o canal em que a TV está sintonizada.
     public int getCanalAtual()
     {
         return televisao.getCanalAtual();

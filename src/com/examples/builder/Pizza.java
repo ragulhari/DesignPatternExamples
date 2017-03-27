@@ -1,7 +1,8 @@
 package com.examples.builder;
 
 /**
- * Created by ricardo on 2/27/17.
+ * Classe que define um objeto pizza, e cada componente dele (massa/molho/recheio).
+ * Há também um método "detalharPizza" que retorna os componentes que compõem cada pizza.
  */
 public class Pizza {
     private String massa = "";

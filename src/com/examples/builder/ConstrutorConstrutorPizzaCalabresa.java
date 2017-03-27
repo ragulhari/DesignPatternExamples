@@ -1,7 +1,9 @@
 package com.examples.builder;
 
 /**
- * Created by ricardo on 2/27/17.
+ * A classe define como se constrói uma pizza do tipo "Calabresa". A classe define como construir
+ * cada um dos componentes da pizza (massa, molho, recheio). Apenas essa classe sabe os detalhes de
+ * sua implementação.
  */
 public class ConstrutorConstrutorPizzaCalabresa extends ConstrutorPizza {
     @Override

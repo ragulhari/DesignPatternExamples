@@ -1,7 +1,9 @@
 package com.examples.builder;
 
 /**
- * Created by ricardo on 2/27/17.
+ * A classe ConstrutorPizza tem a responsabilidade de definir o esqueleto de uma pizza. Todas as pizzas
+ * devem estender essa classe. Ela contém métodos básicos, como a definição de um novo objeto pizza,
+ * e métodos abstratos que deverão ser implementados por cada tipo.
  */
 public abstract class ConstrutorPizza {
     protected Pizza pizza;

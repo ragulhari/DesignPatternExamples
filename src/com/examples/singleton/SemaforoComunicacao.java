@@ -1,14 +1,9 @@
 package com.examples.singleton;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- *
- * @author ricardo
+ * A classe SemaforoComunicacao é a que representa o Singleton no nosso exemplo. O método "getObjeto"
+ * verifica se o objeto já foi criado e, caso afirmativo, retorna a mesma instância já criada. Dessa
+ * forma se garante que apenas uma única instância é criada.
  */
 public class SemaforoComunicacao {
     //Caso o construtor seja private, como no exemplo, podemos tornar essa classe uma "final".
@@ -33,20 +28,22 @@ public class SemaforoComunicacao {
         return numConexoes;
     }
     
+    /*O método getObjeto é o responsável por gerenciar as instâncias, retornando a instância criada
+    caso a mesma já exista.*/
     public static SemaforoComunicacao getObjeto()
     {
         if (objeto == null)
         {
-            objeto = new SemaforoComunicacao();  //lazy instantiation
+            objeto = new SemaforoComunicacao();
         }
         
         return objeto;
     }
-    
-    
+
+
+    //Esse método abstrai uma conexão a um servidor, para fins de exemplo
     public void conectar(){
 
-        //Realiza uma conexão a um servidor, por exemplo
         numConexoes += 1;
     }
 }

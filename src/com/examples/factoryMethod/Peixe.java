@@ -1,9 +1,11 @@
 package com.examples.factoryMethod;
 
+import com.examples.factoryMethod.interfaces.IPrato;
+
 /**
- * Created by ricardo on 2/6/17.
+ * Essa é uma subclasse de IPrato, sendo um dos possíveis objetos criados pelo factoryMethod
  */
-public class Peixe implements Prato {
+public class Peixe implements IPrato {
     @Override
     public void cozinhar() {
         System.out.println("Soltando um peixe frito!");

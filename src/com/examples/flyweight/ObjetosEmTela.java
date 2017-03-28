@@ -1,7 +1,8 @@
 package com.examples.flyweight;
 
 /**
- * Created by ricardo on 2/14/17.
+ * A classe ObjetosEmTela descreve apenas as informações de cada objeto do tipo Bloco, bem como sua
+ * localização.
  */
 public class ObjetosEmTela {
     int x;

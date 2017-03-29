@@ -1,7 +1,8 @@
 package com.examples.iterator;
 
 /**
- * Created by ricardo on 2/20/17.
+ * A classe "Valor" guarda uma string e um inteiro apenas para demonstrar a iteração de um objeto
+ * com algum grau de complexidade.
  */
 public class Valor {
 

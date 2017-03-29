@@ -3,7 +3,8 @@ package com.examples.state;
 import com.examples.state.interfaces.IStatus;
 
 /**
- * Created by ricardo on 2/15/17.
+ * A classe abstrata StatusAbstract deve ser usada para todas as classes que implementem regras de negócio
+ * para um determinado status. Por padrão, assumimos inicialmente o status "Desligado".
  */
 public abstract class StatusAbstract implements IStatus {
 

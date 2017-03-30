@@ -3,7 +3,9 @@ package com.examples.proxy;
 import com.examples.proxy.interfaces.IImagem;
 
 /**
- * Created by ricardo on 2/17/17.
+ * A classe ImagemReal simula uma manipulação de fato de uma imagem, fazendo a leitura do mesmo no disco, por
+ * exemplo, através do método "loadFromDisk". Também há métodos referentes à obtenção de dados
+ * de altura e largura da imagem.
  */
 class ImagemReal implements IImagem {
 

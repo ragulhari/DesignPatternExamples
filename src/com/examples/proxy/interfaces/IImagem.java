@@ -1,7 +1,9 @@
 package com.examples.proxy.interfaces;
 
 /**
- * Created by ricardo on 2/17/17.
+ * Interface que identifica os métodos necessários para manipulação de imagem no nosso exemplo. Aqui
+ * tanto a classe proxy como a classe "real" implementam esses métodos, permitindo ao cliente abstrair
+ * o uso de qualquer uma das classes.
  */
 public interface IImagem {
     void display();

@@ -3,9 +3,13 @@ package com.examples.templateMethod;
 import java.util.Random;
 
 /**
- * Created by ricardo on 2/8/17.
+ * Implementação da partida de Futebol. Essa classe implementa os três métodos definidos em Partida,
+ * inserindo suas regras, porém a execução desses métodos fica a cargo do TemplateMethod
  */
 public class Futebol extends Partida {
+
+    /*Ao contário do basquete, a posse inicial de bola é definida na preparação da partida, não no início,
+    * por isso a definição (uso de randômico) é feito nesse metodo. Essa é uma regra do negócio Futebol.*/
     @Override
     void prepararJogo() {
         System.out.println("-------Iniciando partida de futebol---------");
@@ -18,11 +22,16 @@ public class Futebol extends Partida {
 
     }
 
+    //O início da partida efetivamente não tem grandes ações a não ser o próprio início.
     @Override
     void iniciarPartida() {
         System.out.print("Juiz apita! Começa o jogo! ");
     }
 
+    /*
+    * O encerramento da partida exibe apenas o resultado baseado em um número randômico, para fins de
+    * exemplo
+    * */
     @Override
     void terminarPartida() {
         int pontosTime1;

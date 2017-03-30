@@ -3,7 +3,8 @@ package com.examples.prototype.celulas;
 import com.examples.prototype.celulas.interfaces.Celula;
 
 /**
- * Created by ricardo on 2/18/17.
+ * Implementação da célula do tipo "Bucal", estendendo a classe "Celula". O método mitose é o responsável
+ * por devolver ao demandador o objeto clonado.
  */
 public class CelulaBucal extends Celula {
 

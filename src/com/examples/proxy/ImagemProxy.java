@@ -3,7 +3,12 @@ package com.examples.proxy;
 import com.examples.proxy.interfaces.IImagem;
 
 /**
- * Created by ricardo on 2/17/17.
+ * Essa classe exemplifica a utilização de um proxy para carregamento de imagens. No método "display",
+ * a classe verifica se a imagem já foi carregada uma vez no objeto imagemReal, caso não o tenha feito
+ * realiza a carga. Outro aspecto que é válido identificar é que o objeto ImagemProxy pode ser criado de
+ * duas formas, sendo uma não recebendo as dimensões previamente e outra recebendo essas dimensões. Neste
+ * último caso, ao carregar a imagem em "display", os metadados de tamanho são sobrescritos em relação aos
+ * dados passados no construtor
  */
 public class ImagemProxy implements IImagem {
 

@@ -1,15 +1,16 @@
 package com.examples.interpreter;
 
-import com.examples.interpreter.interfaces.Expressao;
+import com.examples.interpreter.interfaces.IExpressao;
 
 /**
- * Created by ricardo on 2/28/17.
+ * Classe que define a análise da expressão AND, implementando o método "interpretar" para verificar
+ * se o dado informado é verdadeiro ou falso.
  */
-public class ExpressaoAnd implements Expressao {
-    private Expressao expressao1 = null;
-    private Expressao expressao2 = null;
+public class ExpressaoAnd implements IExpressao {
+    private IExpressao expressao1 = null;
+    private IExpressao expressao2 = null;
 
-    public ExpressaoAnd(Expressao expressao1, Expressao expressao2) {
+    public ExpressaoAnd(IExpressao expressao1, IExpressao expressao2) {
         this.expressao1 = expressao1;
         this.expressao2 = expressao2;
     }

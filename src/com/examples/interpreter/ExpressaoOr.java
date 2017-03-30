@@ -1,16 +1,17 @@
 package com.examples.interpreter;
 
-import com.examples.interpreter.interfaces.Expressao;
+import com.examples.interpreter.interfaces.IExpressao;
 
 /**
- * Created by ricardo on 2/28/17.
+ * Classe que define a análise da expressão OR, implementando o método "interpretar" para verificar
+ * se o dado informado é verdadeiro ou falso.
  */
-public class ExpressaoOr implements Expressao {
+public class ExpressaoOr implements IExpressao {
 
-    private Expressao expressao1 = null;
-    private Expressao expressao2 = null;
+    private IExpressao expressao1 = null;
+    private IExpressao expressao2 = null;
 
-    public ExpressaoOr(Expressao expressao1, Expressao expressao2) {
+    public ExpressaoOr(IExpressao expressao1, IExpressao expressao2) {
         this.expressao1 = expressao1;
         this.expressao2 = expressao2;
     }

@@ -1,11 +1,12 @@
 package com.examples.interpreter;
 
-import com.examples.interpreter.interfaces.Expressao;
+import com.examples.interpreter.interfaces.IExpressao;
 
 /**
- * Created by ricardo on 2/28/17.
+ A expressão TERMINAL avalia no método "interpretar" se o valor passado está contido na informação ou não.
+ Essa análise é usada em composição com as análises AND e OR para analisar as expressões.
  */
-public class ExpressaoTerminal implements Expressao {
+public class ExpressaoTerminal implements IExpressao {
 
     private String informacao;
 

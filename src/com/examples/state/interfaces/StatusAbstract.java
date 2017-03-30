@@ -1,4 +1,4 @@
-package com.examples.state;
+package com.examples.state.interfaces;
 
 import com.examples.state.interfaces.IStatus;
 

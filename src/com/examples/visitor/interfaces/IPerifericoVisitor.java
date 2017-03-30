@@ -6,9 +6,10 @@ import com.examples.visitor.Mouse;
 import com.examples.visitor.Teclado;
 
 /**
- * Created by ricardo on 2/28/17.
+ * Definição da interface que deve ser implementada por cada ação. Todas as ações devem implementar seu
+ * código na mesma classe para cada componente. Essa ação será visitada pelos componentes conforme demandado.
  */
-public interface PerifericoVisitor {
+public interface IPerifericoVisitor {
     void visitar(Computador computador);
     void visitar(Mouse mouse);
     void visitar(Teclado teclado);

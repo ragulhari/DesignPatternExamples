@@ -1,11 +1,15 @@
 package com.examples.visitor;
 
-import com.examples.visitor.interfaces.PerifericoVisitor;
+import com.examples.visitor.interfaces.IPerifericoVisitor;
 
 /**
- * Created by ricardo on 2/28/17.
+ * Classe que implementa a visitação de cada um dos componentes para a ação de inicialização.
+ * cada um dos métodos "visitar" recebe como parâmetro o componente a ser modificado. No nosso exemplo
+ * não fazemos modificações nos objetos, mas o padrão consiste em exatamemente modificar o estado do
+ * objeto passado de forma que não é necessário codificar a classe do objeto, mas apenas definir a ação
+ * em uma nova classe.
  */
-public class PerifericoAcaoVisitor implements PerifericoVisitor {
+public class PerifericoAcaoVisitor implements IPerifericoVisitor {
     @Override
     public void visitar(Computador computador) {
         System.out.println("Inicializando o computador");

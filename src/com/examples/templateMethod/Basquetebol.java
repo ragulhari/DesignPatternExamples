@@ -6,6 +6,7 @@ import java.util.Random;
  * Implementação da partida de Basquetebol. Essa classe implementa os três métodos definidos em Partida,
  * inserindo suas regras, porém a execução desses métodos fica a cargo do TemplateMethod
  */
+
 public class Basquetebol extends Partida {
 
     //Método de preparação da partida, no caso de basquete há o alinhamento dos times.

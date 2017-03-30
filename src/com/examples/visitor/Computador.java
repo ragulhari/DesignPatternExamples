@@ -1,21 +1,25 @@
 package com.examples.visitor;
 
-import com.examples.visitor.interfaces.Periferico;
-import com.examples.visitor.interfaces.PerifericoVisitor;
+import com.examples.visitor.interfaces.IPeriferico;
+import com.examples.visitor.interfaces.IPerifericoVisitor;
 
 /**
- * Created by ricardo on 2/28/17.
+ * A classe Computador é um pouco mais complexa que os outros componentes que também implementam IPeriferico,
+ * pois ela é o agregador de todos os componentes. Assim, na sua instanciação, ele define a dependência dos
+ * objetos Teclado, Mouse e Monitor e, no seu metodo accept, além de visitar a ação passada, ele executa um
+ * "for" para visitar a ação passada para cada componente.
  */
-public class Computador implements Periferico {
+public class Computador implements IPeriferico {
 
-    Periferico[] componentes;
-
+    //No construtor da classe definimos cada um dos componentes que compõem o computador.
+    IPeriferico[] componentes;
     public Computador() {
-        componentes = new Periferico[] {new Mouse(), new Teclado(), new Monitor()};
+        componentes = new IPeriferico[] {new Mouse(), new Teclado(), new Monitor()};
     }
 
+    //No seu método accept, ele além de visitar sua ação, coordena a visitação de cada um dos componentes.
     @Override
-    public void accept(PerifericoVisitor visitor) {
+    public void accept(IPerifericoVisitor visitor) {
         for (int i=0; i < componentes.length; i++){
             componentes[i].accept(visitor);
         }

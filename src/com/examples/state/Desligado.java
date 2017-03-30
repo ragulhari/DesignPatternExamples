@@ -1,5 +1,7 @@
 package com.examples.state;
 
+import com.examples.state.interfaces.StatusAbstract;
+
 /**
  * Implementa o estado "Desligado". O método executar verifica as regras de negócio antes da mudança
  * do estado.

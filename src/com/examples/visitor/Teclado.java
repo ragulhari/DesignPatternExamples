@@ -1,14 +1,15 @@
 package com.examples.visitor;
 
-import com.examples.visitor.interfaces.Periferico;
-import com.examples.visitor.interfaces.PerifericoVisitor;
+import com.examples.visitor.interfaces.IPeriferico;
+import com.examples.visitor.interfaces.IPerifericoVisitor;
 
 /**
- * Created by ricardo on 2/28/17.
+ * Classe que representa um componente "Teclado" do computador. Há apenas um método implementado. Esse método
+ * é responsável pela execução da ação definida no parâmetro passado. Essa operação é denominada visitação.
  */
-public class Teclado implements Periferico {
+public class Teclado implements IPeriferico {
     @Override
-    public void accept(PerifericoVisitor visitor) {
+    public void accept(IPerifericoVisitor visitor) {
         visitor.visitar(this);
     }
 }

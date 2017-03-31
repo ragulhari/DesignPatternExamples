@@ -4,6 +4,8 @@ import com.examples.composite.IInimigo;
 import com.examples.strategy.interfaces.IAtaque;
 
 /**
+ * classe inicial do exemplo.
+ *
  * Strategy é um padrão que consiste na implementação de algoritmos diferentes para resolver um mesmo problema,
  * de modo que a forma de resolução possa ser definida pelo sistema, conforme mais apropriado ao contexto que se
  * apresenta.
@@ -14,11 +16,14 @@ import com.examples.strategy.interfaces.IAtaque;
  *
  * Definimos dois tipos de ataque, um descrito na classe "AtaqueFogo" outro na classe "AtaqueVoador". Esses ataques
  * são atribuidos aos inimigos criados na classe ExecutaStrategy e uma simulação de ataque é realizado por cada um
+ *
+ * @author Ricardo D. Agulhari
+ * Março/2017
  */
 public class ExecutaStrategy {
 
     //realizarAtaque é um método que invoca o ataque do algoritmo escolhido para o objeto
-    public static String realizarAtaque(IAtaque obj){
+    private static String realizarAtaque(IAtaque obj){
         return obj.atacar();
     }
 

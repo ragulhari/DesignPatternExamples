@@ -1,7 +1,7 @@
 package com.examples.command.interfaces;
 
 /**
- * Created by ricardo on 2/10/17.
+ * Definição da interface de um pedido. Contém apenas um método "execute".
  */
 public interface IPedido {
     void execute();

@@ -1,3 +1,7 @@
+import com.examples.abstractFactory.ExecutaAbstractFactory;
+import com.examples.bridge.ExecutaBridge;
+import com.examples.builder.ExecutaBuilder;
+import com.examples.chainOfResponsibility.ExecutaChainOfResponsibility;
 import com.examples.command.ExecutaCommand;
 import com.examples.decorator.ExecutaDecorator;
 import com.examples.composite.ExecutaComposite;
@@ -5,14 +9,19 @@ import com.examples.adapter.ExecutaAdapter;
 import com.examples.dependencyInjection.ExecutaDI;
 import com.examples.facade.ExecutaFacade;
 import com.examples.flyweight.ExecutaFlyweight;
+import com.examples.interpreter.ExecutaInterpreter;
+import com.examples.iterator.ExecutaIterator;
 import com.examples.mediator.ExecutaMediator;
 import com.examples.memento.ExecutarMemento;
 import com.examples.observer.ExecutaObserver;
+import com.examples.prototype.ExecutaPrototype;
+import com.examples.proxy.ExecutaProxy;
 import com.examples.singleton.ExecutaSingleton;
 import com.examples.state.ExecutaState;
 import com.examples.strategy.ExecutaStrategy;
 import com.examples.factoryMethod.ExecutaFactoryMethod;
 import com.examples.templateMethod.ExecutaTemplateMethod;
+import com.examples.visitor.ExecutaVisitor;
 
 /**
  * Classe criada para centralizar todos as execuções de Patterns contidos na solution.
@@ -30,7 +39,7 @@ public class Main {
         /*Variável usada para definição do pattern de execução. Contém um valor padrão que
         pode ser modificada para um dos patterns listados no Switch abaixo.
          */
-        String pattern = "command";
+        String pattern = "strategy";
 
         //Tratamento dos parâmetros usados na execução. Só será considerado o primeiro parâmetro.
         try {
@@ -48,55 +57,82 @@ public class Main {
         * */
 
         switch (pattern){
-            case "facade":
-                ExecutaFacade.go();
-                break;
-            case "mediator":
-                ExecutaMediator.go();
-                break;
-            case "decorator":
-                ExecutaDecorator.go();
-                break;
-            case "composite":
-                ExecutaComposite.go();
+            case "abstractFactory":
+                ExecutaAbstractFactory.go();
                 break;
             case "adapter":
                 ExecutaAdapter.go();
                 break;
-            case "singleton":
-                ExecutaSingleton.go();
+            case "bridge":
+                ExecutaBridge.go();
                 break;
-            case "strategy":
-                ExecutaStrategy.go();
+            case "builder":
+                ExecutaBuilder.go();
                 break;
-            case "observer":
-                ExecutaObserver.go();
-                break;
-            case "factorymethod":
-                ExecutaFactoryMethod.go();
-                break;
-            case "dependencyInjection":
-                ExecutaDI.go();
-                break;
-            case "templateMethod":
-                ExecutaTemplateMethod.go();
+            case "chainOfResponsibility":
+                ExecutaChainOfResponsibility.go(330);
                 break;
             case "command":
                 ExecutaCommand.go();
                 break;
-            case "memento":
-                ExecutarMemento.go();
+            case "composite":
+                ExecutaComposite.go();
+                break;
+            case "decorator":
+                ExecutaDecorator.go();
+                break;
+            case "dependencyInjection":
+                ExecutaDI.go();
+                break;
+            case "facade":
+                ExecutaFacade.go();
+                break;
+            case "factorymethod":
+                ExecutaFactoryMethod.go();
                 break;
             case "flyweight":
                 ExecutaFlyweight.go(10000);
                 break;
+            case "interpreter":
+                ExecutaInterpreter.go();
+                break;
+            case "iterator":
+                ExecutaIterator.go();
+                break;
+            case "mediator":
+                ExecutaMediator.go();
+                break;
+            case "memento":
+                ExecutarMemento.go();
+                break;
+            case "observer":
+                ExecutaObserver.go();
+                break;
+            case "prototype":
+                ExecutaPrototype.go();
+                break;
+            case "proxy":
+                ExecutaProxy.go();
+                break;
+            case "singleton":
+                ExecutaSingleton.go();
+                break;
             case "state":
                 ExecutaState.go();
+                break;
+            case "strategy":
+                ExecutaStrategy.go();
+                break;
+            case "templateMethod":
+                ExecutaTemplateMethod.go();
+                break;
+            case "visitor":
+                ExecutaVisitor.go();
                 break;
             default:
                 //Tratamento caso o pattern não seja achado.
                 System.out.println("Não foi encontrado pattern com o nome " + pattern);
-                break;
+                 break;
         }
 
     }

@@ -1,7 +1,8 @@
 package com.examples.flyweight;
 
 /**
- * Created by ricardo on 2/14/17.
+ * A classe Bloco é o objeto básico do exemplo. Ele possui apenas a informação de textura, pois o
+ * posicionamento dele em tela é definido por uma outra classe, chamado "ObjetosEmtela".
  */
 public class Bloco {
     public String texturaArquivo;

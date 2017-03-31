@@ -1,5 +1,11 @@
 package com.examples.facade;
 
+/**
+ * Classe que implementa regras de negócio relativos ao cinto de segurança.
+ * Basicamente, para o exemplo, as operações dessa classe se restringem a apertar e soltar o cinto
+ * e verificar o status.
+ */
+
 public class CintoSeguranca {
 
     private boolean cintoMotoristaHabilitado;

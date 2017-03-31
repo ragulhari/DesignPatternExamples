@@ -6,8 +6,9 @@
 package com.examples.singleton;
 
 /**
- *
- * @author ricardo
+ * A classe Comunicador é a responsável pela execução do exemplo. Ela cria três objetos
+ * "SemaforoComunicacao" porém a criação do objeto não se dá pelo uso da clausula "new", mas sim
+ * pelo uso do metodo "getObjeto", o que garante o uso de uma única instãncia.
  */
 public class Comunicador {
     
@@ -17,11 +18,14 @@ public class Comunicador {
     
     public Comunicador()
     {
+        //Cria ou recupera a instância criada
         conector1 = SemaforoComunicacao.getObjeto();
         conector2 = SemaforoComunicacao.getObjeto();
         conector3 = SemaforoComunicacao.getObjeto();
     }
 
+    /*O método realizarConexoes simula o uso dos 3 objetos de forma paralela, porém o número de conexões
+    * é centralizado, demonstrando o uso do singleton*/
     public void realizarConexoes(){
             
         while(true){

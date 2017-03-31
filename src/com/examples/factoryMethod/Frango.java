@@ -1,6 +1,12 @@
 package com.examples.factoryMethod;
 
-public class Frango implements Prato {
+import com.examples.factoryMethod.interfaces.IPrato;
+
+/**
+ * Essa é uma subclasse de IPrato, sendo um dos possíveis objetos criados pelo factoryMethod
+ */
+
+public class Frango implements IPrato {
     @Override
     public void cozinhar() {
         System.out.println("Soltando um frango assado!");

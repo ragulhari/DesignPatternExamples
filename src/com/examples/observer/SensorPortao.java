@@ -1,9 +1,12 @@
 package com.examples.observer;
 
+import com.examples.observer.interfaces.IAlarme;
+
 /**
- * Created by ricardo on 2/4/17.
+ * A classe SensorPortao é um dos componentes do Alarme. O método "alarme", implementado de IAlarme,
+ * executa a ação quando o alarme é disparado (notificado pelo observador).
  */
-public class SensorPortao implements IAlarme{
+public class SensorPortao implements IAlarme {
 
     @Override
     public void alarme() {

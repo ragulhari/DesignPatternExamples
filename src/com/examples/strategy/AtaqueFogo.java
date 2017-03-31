@@ -1,17 +1,23 @@
 package com.examples.strategy;
 
+import com.examples.strategy.interfaces.IAtaque;
+
 import java.util.Random;
 
 /**
- * Created by ricardo on 2/4/17.
+ * A classe "AtaqueFogo" implementa um tipo de ataque específico, por isso implementa os métodos definidos
+ * em IAtaque.
  */
-public class FlorAtaque implements IAtaque {
+public class AtaqueFogo implements IAtaque {
 
     private int areaAtaque = 3;
     private int dano = 0;
     private int velocidade = 0;
     private String tituloInimigo = "";
 
+    /*O método atacar devolve um texto informando a velocidade que o inimigo atingiu e o dano,
+    * bem como o nome do inimigo. As informações, com exceção do nome, são definidos por meio de parâmetros
+    * randômicos*/
     @Override
     public String atacar() {
 
@@ -27,6 +33,8 @@ public class FlorAtaque implements IAtaque {
                 " e velocidade " + velocidade;
     }
 
+    /*O método defineInimigo recebe um nome de inimigo para identificar a qual será aplicado o ataque definido
+    * no método "atacar"*/
     @Override
     public void defineInimigo(String inimigo) {
         tituloInimigo = inimigo;

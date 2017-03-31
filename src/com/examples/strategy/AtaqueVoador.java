@@ -1,9 +1,12 @@
 package com.examples.strategy;
 
+import com.examples.strategy.interfaces.IAtaque;
+
 import java.util.Random;
 
 /**
- * Created by ricardo on 2/4/17.
+ * A classe "AtaqueVoador" implementa um tipo de ataque específico, por isso implementa os métodos definidos
+ * em IAtaque.
  */
 public class AtaqueVoador implements IAtaque {
 
@@ -11,7 +14,9 @@ public class AtaqueVoador implements IAtaque {
     private int alcanceAtaque = 0;
     private String tituloInimigo = "";
 
-
+    /*O método atacar devolve um texto informando a altura que o inimigo atingiu e o alcance de ataque,
+    * bem como o nome do inimigo. As informações, com exceção do nome, são definidos por meio de parâmetros
+    * randômicos*/
     @Override
     public String atacar() {
 
@@ -28,6 +33,8 @@ public class AtaqueVoador implements IAtaque {
                 " e alcance do ataque " + alcanceAtaque;
     }
 
+    /*O método defineInimigo recebe um nome de inimigo para identificar a qual será aplicado o ataque definido
+    * no método "atacar"*/
     @Override
     public void defineInimigo(String inimigo) {
         this.tituloInimigo = inimigo;

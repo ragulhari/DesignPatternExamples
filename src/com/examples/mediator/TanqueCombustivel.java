@@ -1,7 +1,8 @@
 package com.examples.mediator;
 
 /**
- * Created by root on 1/27/17.
+ * A classe do tanque de combustível possui duas informações, o valume máximo possível e o volume
+ * disponível no momento. Os métodos retornam o volume do tanque e se ele está na reserva ou não.
  */
 public class TanqueCombustivel {
 
@@ -10,11 +11,8 @@ public class TanqueCombustivel {
 
     public TanqueCombustivel() {}
 
-    public String retornarVolumeDisponivel()
-    {
-        return Double.toString(lVolumeDisponivel);
-    }
-
+    /*Consideramos o tanque na reserva quando o volume disopnível está abaixo de 1/8
+    do volume total do tanque*/
     public boolean tanqueNaReserva() {
         if (lVolumeDisponivel > (lVolumeMaximo / 8))
             return false;

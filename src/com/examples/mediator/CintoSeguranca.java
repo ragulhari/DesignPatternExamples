@@ -1,5 +1,9 @@
 package com.examples.mediator;
 
+/**
+ * A classe CintoSeguranca só mantém o status se o mesmo está atado ou não. Os métodos apenas
+ * atribuem os status e devolvem o status para uso pelas outras classes.
+ */
 public class CintoSeguranca {
 
     private boolean cintoMotoristaHabilitado;

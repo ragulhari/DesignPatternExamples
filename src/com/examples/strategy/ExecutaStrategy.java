@@ -36,24 +36,26 @@ public class ExecutaStrategy {
 
         /*Criamos um objeto para cada tipo de ataque. O objeto será atribuído ao inimigo para que o mesmo
         possa realizar a ação. */
-        AtaqueVoador atkVoador = new AtaqueVoador();
-        AtaqueFogo atkFlor = new AtaqueFogo();
+        IAtaque ataque = new AtaqueVoador();
 
         /*abaixo iniciamos a execução d exemplo. Primeiramente atribuimos um ataque ao inimigo pelo método
         * "defineInimigo" e depois executamos o método estático "realizarAtaque" para que o algoritmo de
         * ataque seja executado para o inimigo selecionado*/
         System.out.println("-------------");
-        atkVoador.defineInimigo(tartaruga1.tituloInimigo);
-        System.out.println(realizarAtaque(atkVoador));
+        ataque.defineInimigo(tartaruga1.tituloInimigo);
+        System.out.println(realizarAtaque(ataque));
         System.out.println("-------------");
-        atkVoador.defineInimigo(tartaruga2.tituloInimigo);
-        System.out.println(realizarAtaque(atkVoador));
+        ataque.defineInimigo(tartaruga2.tituloInimigo);
+        System.out.println(realizarAtaque(ataque));
         System.out.println("-------------");
-        atkFlor.defineInimigo(flor1.tituloInimigo);
-        System.out.println(realizarAtaque(atkFlor));
+        ataque.defineInimigo(tartaruga3.tituloInimigo);
+        System.out.println(realizarAtaque(ataque));
+
+        ataque = new AtaqueFogo();
+
         System.out.println("-------------");
-        atkVoador.defineInimigo(tartaruga3.tituloInimigo);
-        System.out.println(realizarAtaque(atkVoador));
+        ataque.defineInimigo(flor1.tituloInimigo);
+        System.out.println(realizarAtaque(ataque));
 
     }
 }

@@ -5,7 +5,7 @@ package com.examples.builder;
  * cada um dos componentes da pizza (massa, molho, recheio). Apenas essa classe sabe os detalhes de
  * sua implementação.
  */
-public class ConstrutorConstrutorPizzaCalabresa extends ConstrutorPizza {
+public class ConstrutorPizzaCalabresa extends ConstrutorPizza {
     @Override
     public void construirMassa() {
         pizza.defineMassa("Massa com farinha refinada");

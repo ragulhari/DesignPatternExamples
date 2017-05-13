@@ -9,8 +9,8 @@ public class SemaforoComunicacao {
     //Caso o construtor seja private, como no exemplo, podemos tornar essa classe uma "final".
     //Isso é vantajoso porque o compilador aplica otimizações de performance nesse tipo de classe
     
-    
-    public static SemaforoComunicacao objeto = null;
+    //Correção de nível de acesso do objeto Singleton
+    private static SemaforoComunicacao objeto = null;
     private int numConexoes = 0;
     
     /*Poderia ser utilizado Protected também, mas classes com o mesmo Package poderiam instanciar novos objetos,

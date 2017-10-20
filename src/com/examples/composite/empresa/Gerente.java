@@ -1,4 +1,4 @@
-package com.examples.composite;
+package com.examples.composite.empresa;
 
 import com.examples.composite.interfaces.IFuncionario;
 
@@ -18,7 +18,7 @@ public class Gerente implements IFuncionario {
     private int salario;
     private List<IFuncionario> subordinados;
 
-    protected Gerente(String nome, String area, int salario)
+    public Gerente(String nome, String area, int salario)
     {
         this.nome = nome;
         this.area = area;

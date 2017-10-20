@@ -1,6 +1,12 @@
 package com.examples.composite;
 
+import com.examples.composite.empresa.Funcionario;
+import com.examples.composite.empresa.Gerente;
+import com.examples.composite.game.Caixa;
+import com.examples.composite.game.Fase;
+import com.examples.composite.game.Inimigo;
 import com.examples.composite.interfaces.IFuncionario;
+import com.examples.composite.interfaces.IObjeto;
 
 /**
  * Classe inicial do exemplo.
@@ -18,7 +24,7 @@ import com.examples.composite.interfaces.IFuncionario;
  * em aula). Este exemplo tem continuidade no pattern Strategy. Neste caso o exemplo consiste
  * na instanciação e definição dos inimigos, criando uma hierarquia com base na especialização dos inimigos
  * (por exemplo, no primeiro nível uma tartaruga, o segundo uma tartaruga com asas, etc.).
- * Todos os objetos "IInimigo" possui um método render(), que seria responsável pela renderização do objeto
+ * Todos os objetos "Inimigo" possui um método render(), que seria responsável pela renderização do objeto
  * no jogo.
  *
  * @author Ricardo D. Agulhari
@@ -92,18 +98,18 @@ public class ExecutaComposite {
         * dos objetos do tipo inimigo e a montagem da hierarquia dos objetos.
         * */
 
-        IInimigo inimigoBase = new IInimigo("IInimigo Base", 0, 0);
-        IInimigo tartaruga = new IInimigo("Tartaruga básica", 2, 1);
-        IInimigo tartarugaFogo = new IInimigo("Tartaruga de fogo", 2, 6);
-        IInimigo tartarugaVoador = new IInimigo("Tartaruga Voadora", 2, 4);
-        IInimigo goomba = new IInimigo("Goomba", 1, 1);
-        IInimigo goombaVoador = new IInimigo("Goomba Voador", 1, 3);
+        Fase f12 = new Fase("Mundo 1-2");
 
-        tartaruga.add(tartarugaFogo);
-        tartaruga.add(tartarugaVoador);
-        goomba.add(goombaVoador);
-        inimigoBase.add(tartaruga);
-        inimigoBase.add(goomba);
+        f12.add(new Caixa(3, "item"));
+        f12.add(new Caixa(3, "tijolo"));
+        f12.add(new Caixa(1, "tijolo"));
+        f12.add(new Caixa(3, "pedra"));
+        f12.add(new Caixa(2, "item"));
+
+        f12.add(new Inimigo("Goomba", 1, 3));
+        f12.add(new Inimigo("Tartaruga verde", 1, 2));
+        f12.add(new Inimigo("Tartaruga verde", 2, 4));
+        f12.add(new Inimigo("Tartaruga vermelha", 1, 4));
 
         /*
         * A segunda parte do exemplo consiste em percorrer a lista de objetos e das respectivas
@@ -111,13 +117,10 @@ public class ExecutaComposite {
         * como se dá o encadeamento destes objetos.
         * */
 
-        System.out.println("Hierarquia de inimigos");
-        for (IInimigo i : inimigoBase.especializacoes) {
+        System.out.println(f12.titulo);
+        for (IObjeto i : f12.getObjetos()) {
 
             System.out.println("\t" + i.render());
-
-            for (IInimigo in : i.especializacoes)
-                System.out.println("\t\t" + in.render());
 
         }
     }

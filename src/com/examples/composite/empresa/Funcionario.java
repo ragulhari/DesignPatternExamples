@@ -1,4 +1,4 @@
-package com.examples.composite;
+package com.examples.composite.empresa;
 
 import com.examples.composite.interfaces.IFuncionario;
 
@@ -16,7 +16,7 @@ public class Funcionario implements IFuncionario {
     private String area;
     private int salario;
 
-    Funcionario(String nome, String area, int salario)
+    public Funcionario(String nome, String area, int salario)
     {
         this.nome = nome;
         this.area = area;

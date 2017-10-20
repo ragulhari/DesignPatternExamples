@@ -7,8 +7,8 @@ import java.util.List;
 
 /**
  * Esta classe descreve os comportamentos e propriedades referentes a um funcionário. Definimos as
- * propriedades que descrevem o funcionário (nome, area, salario) e um objeto que contém uma lista
- * dos subordinados
+ * propriedades que descrevem o funcionário (nome, area, salario) e o método da interface (detalharFuncionario)
+ * com o print dos dados do funcionário.
 * */
 
 public class Funcionario implements IFuncionario {

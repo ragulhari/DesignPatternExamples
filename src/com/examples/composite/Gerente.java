@@ -1,9 +1,16 @@
-package com.examples.composite.interfaces;
+package com.examples.composite;
 
-import com.examples.composite.Funcionario;
+import com.examples.composite.interfaces.IFuncionario;
 
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * Esta classe descreve os comportamentos e propriedades referentes a um funcionário. Definimos as
+ * propriedades que descrevem o funcionário (nome, area, salario), além de um objeto que contém uma lista
+ * dos subordinados e o método da interface (detalharFuncionario) com o print dos dados do funcionário.
+ * */
+
 
 public class Gerente implements IFuncionario {
     private String nome;
@@ -11,7 +18,7 @@ public class Gerente implements IFuncionario {
     private int salario;
     private List<IFuncionario> subordinados;
 
-    public Gerente(String nome, String area, int salario)
+    protected Gerente(String nome, String area, int salario)
     {
         this.nome = nome;
         this.area = area;
@@ -46,7 +53,7 @@ public class Gerente implements IFuncionario {
     @Override
     public String detalharFuncionario() {
         return ("Dados do empregado: [ Nome: " + this.nome +
-                ", Área: " + this.area + ", Salário: " + this.salario + ", NumSubordinados: " +
+                ", Área: " + this.area + ", Salário: " + this.salario + ", Subordinados Imediatos: " +
                 Integer.toString(this.subordinados.size()) + "]");
     }
 }

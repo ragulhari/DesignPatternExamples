@@ -1,6 +1,5 @@
 package com.examples.composite;
 
-import com.examples.composite.interfaces.Gerente;
 import com.examples.composite.interfaces.IFuncionario;
 
 /**
@@ -8,9 +7,10 @@ import com.examples.composite.interfaces.IFuncionario;
  *
  * Apresentamos dois exemplos de composite.
  *
- * O primeiro exemplo consiste na montagem de uma hierarquia de objetos da classe "Funcionário" para
+ * O primeiro exemplo consiste na montagem de uma hierarquia de objetos que implementam a interface "IFuncionario" para
  * representar a hierarquia de uma empresa. A classe funcionário descreve três dados básicos:
- * nome, cargo e salário, bem como um array com a lista de subordinados imediatos.
+ * nome, cargo e salário. A Classe Gerente, além das 3 propriedades citadas, acrescenta um array com a lista de
+ * subordinados imediatos.
  * Uma vez montada a hierarquia o sistema executa uma busca para exibir essa hierarquia no
  * console exibindo a hierarquia existente.
  *
@@ -38,7 +38,7 @@ public class ExecutaComposite {
 
     private static void testeHierarquiaEmpresa() {
         /*
-        * A primeira parte do exemplo consiste em criar todos os objetos Funcionários
+        * A primeira parte do exemplo consiste em criar todos os objetos Funcionários e Gerentes
         * e o encadeamento entre os objetos, utilizando o método "incluirSubordinado".
         *
         * A inclusão é sempre do superior para os funcionários. Assim, o presidente possui
@@ -68,11 +68,12 @@ public class ExecutaComposite {
 
         /*
         * Após a definição dos objetos e a estruturação destes em uma hierarquia, executamos um método
-        * comum a todos, getSubordinados(), para exibir a lista de subordinados imediatos. Conforme
-        * percorremos a lista, exibimos os funcionários.
+        * comum a todos, detalharFuncionario(), para mostrar as informações de cada instância. Este exemplo já
+        * considera que são 2 níveis de hierarquia. Para um exemplo que trabalhe com qualquer hierarquia, é necessário
+        * refatorar a forma de percorrer essa lista.
         * */
 
-        System.out.println(presidente.toString());
+        System.out.println(presidente.detalharFuncionario());
         for (IFuncionario diretor: presidente.getSubordinados()) {
 
             System.out.println("\t" + diretor.detalharFuncionario());

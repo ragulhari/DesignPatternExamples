@@ -1,5 +1,8 @@
 package com.examples.composite;
 
+import com.examples.composite.interfaces.Gerente;
+import com.examples.composite.interfaces.IFuncionario;
+
 /**
  * Classe inicial do exemplo.
  *
@@ -42,14 +45,14 @@ public class ExecutaComposite {
         * dois diretores abaixo dele, assim como cada diretor possui sua hierarquia.
         * */
 
-        Funcionario presidente = new Funcionario("Francisco", "Presidência da empresa", 10000);
-        Funcionario diretorVendas = new Funcionario("Roberta", "Diretora de Vendas", 8000);
-        Funcionario diretorMkt = new Funcionario("Osmair", "Diretor de Marketing", 8000);
-        Funcionario vendedor1 = new Funcionario("Janete", "Vendedora", 3000);
+        Gerente presidente = new Gerente("Francisco", "Presidência da empresa", 10000);
+        Gerente diretorVendas = new Gerente("Roberta", "Diretora de Vendas", 8000);
+        Gerente diretorMkt = new Gerente("Osmair", "Diretor de Marketing", 8000);
+        Funcionario vendedor1 = new Funcionario("Janete", "Vendedora", 2700);
         Funcionario vendedor2 = new Funcionario("Claudio", "Vendedor", 3000);
-        Funcionario vendedor3 = new Funcionario("Matheus", "Vendedor", 3000);
+        Funcionario vendedor3 = new Funcionario("Matheus", "Vendedor", 2800);
         Funcionario asssistentemkt1 = new Funcionario("Ana Cláudia", "Assistente de Marketing", 2500);
-        Funcionario designer1 = new Funcionario("Jhonny", "Designer", 1800);
+        Funcionario designer1 = new Funcionario("Jhonny", "Designer", 1600);
         Funcionario designer2 = new Funcionario("Antônio", "Designer", 1800);
 
         diretorVendas.incluirSubordinado(vendedor1);
@@ -70,13 +73,14 @@ public class ExecutaComposite {
         * */
 
         System.out.println(presidente.toString());
-        for (Funcionario diretor: presidente.getSubordinados()) {
+        for (IFuncionario diretor: presidente.getSubordinados()) {
 
-            System.out.println("\t" + diretor.toString());
+            System.out.println("\t" + diretor.detalharFuncionario());
 
-            for (Funcionario func: diretor.getSubordinados())
-                System.out.println("\t\t" + func.toString());
-
+            if (diretor instanceof Gerente) {
+                for (IFuncionario func : ((Gerente)diretor).getSubordinados())
+                    System.out.println("\t\t" + func.detalharFuncionario());
+            }
         }
 
     }
